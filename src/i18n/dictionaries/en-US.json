@@ -1,0 +1,10 @@
+{
+  "global": {
+    "appName": "My Application",
+    "welcomeMessage": "Welcome to My Application",
+    "errorOccurred": "An error occurred, please try again later.",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  }
+}

@@ -3,8 +3,8 @@ import { geistMono, geistSans } from '@/ui/font';
 import '@/ui/globals.css';
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
-import { Provider } from './provider';
 import { Header } from './modules/header';
+import { Provider } from './provider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

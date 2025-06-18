@@ -1,0 +1,10 @@
+{
+  "global": {
+    "appName": "我的应用程序",
+    "welcomeMessage": "欢迎使用我的应用",
+    "errorOccurred": "发生错误，请稍后再试。",
+    "loading": "加载中...",
+    "submit": "提交",
+    "cancel": "取消"
+  }
+}
