@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ethers-contracts": "rimraf src/constants/ethers-contracts && typechain --target=ethers-v6 'src/constants/abis/*.json' --out-dir=src/constants/ethers-contracts",
+    "prepare": "npm run ethers-contracts"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.0",
@@ -16,6 +18,9 @@
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tooltip": "^1.2.7",
+    "@rainbow-me/rainbowkit": "^2.2.8",
+    "@tanstack/react-query": "^5.80.10",
+    "@typechain/ethers-v6": "^0.5.1",
     "class-variance-authority": "^0.7.1",
     "dotenv": "^16.4.7",
     "ethers": "^6.13.4",
@@ -29,7 +34,10 @@
     "react-use": "^17.6.0",
     "swr": "^2.3.3",
     "tailwind-merge": "^2.6.0",
+    "typechain": "^8.3.2",
     "use-deep-compare-effect": "^1.8.1",
+    "viem": "^2.31.3",
+    "wagmi": "^2.15.6",
     "zustand": "^5.0.5"
   },
   "devDependencies": {
@@ -42,6 +50,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "postcss": "^8",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

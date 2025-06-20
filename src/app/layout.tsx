@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import { geistMono, geistSans } from '@/ui/font';
 import '@/ui/globals.css';
+import '@rainbow-me/rainbowkit/styles.css';
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { Header } from './modules/header';
