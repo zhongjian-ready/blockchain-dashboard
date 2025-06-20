@@ -38,7 +38,7 @@ export function LocaleSwitcher() {
         <Button
           variant="default"
           size="icon"
-          className="w-10 h-10 rounded-lg flex-shrink-0 text-white bg-slate-800 hover:bg-slate-700 transition focus-visible:[box-shadow:none]"
+          className="w-10 h-10 rounded-lg flex-shrink-0 text-black bg-slate-100 hover:bg-slate-200 dark:text-white dark:bg-slate-800 dark:hover:bg-slate-700 transition focus-visible:[box-shadow:none]"
         >
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
@@ -49,7 +49,10 @@ export function LocaleSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         sideOffset={6}
-        className={cn(bgDialog, '!w-[12.5rem] rounded-lg p-2')}
+        className={cn(
+          bgDialog,
+          '!w-[12.5rem] rounded-lg p-2 border-slate-100 dark:border-black bg-slate-50 dark:bg-slate-900'
+        )}
       >
         <DropdownMenuRadioGroup
           value={locale}
@@ -60,7 +63,7 @@ export function LocaleSwitcher() {
             <DropdownMenuRadioItem
               key={locale}
               value={locale}
-              className="text-base py-2 bg-[#ECF1FE] dark:bg-black dark:hover:bg-opacity-30 transition rounded-xl"
+              className="text-base py-2 bg-[#ECF1FE] dark:bg-slate-900 transition rounded-md outline-none"
             >
               <LocaleDisplayName locale={locale} />
             </DropdownMenuRadioItem>

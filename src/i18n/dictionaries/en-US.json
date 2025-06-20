@@ -5,6 +5,8 @@
     "errorOccurred": "An error occurred, please try again later.",
     "loading": "Loading...",
     "submit": "Submit",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "num": "[html]number is ${num}。",
+    "walletAddress": "[markdown]Add <WalletAddress/> token to Wallet"
   }
 }

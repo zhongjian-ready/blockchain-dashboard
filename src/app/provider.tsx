@@ -27,9 +27,9 @@ export function Provider({ children, header }: Props) {
 
   return (
     <TouchProvider>
-      <div className="sticky top-0 w-full z-50">{header}</div>
+      <div className="sticky top-0 w-full z-20">{header}</div>
       <ThemeWatcher />
-      <main className={cn('bg-white dark:bg-black')}>{children}</main>
+      <main className={cn('bg-white dark:bg-slate-900 p-8')}>{children}</main>
     </TouchProvider>
   );
 }

@@ -5,6 +5,8 @@
     "errorOccurred": "发生错误，请稍后再试。",
     "loading": "加载中...",
     "submit": "提交",
-    "cancel": "取消"
+    "cancel": "取消",
+    "num": "[html]数字是 ${num}。",
+    "walletAddress": "[markdown]添加 <WalletAddress/> 代币到钱包"
   }
 }

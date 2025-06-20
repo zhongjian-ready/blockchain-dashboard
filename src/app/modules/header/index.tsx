@@ -4,10 +4,12 @@ import { Menu } from '../menu';
 
 export function Header() {
   return (
-    <div>
+    <div className="flex justify-between items-center bg-slate-50 dark:bg-black px-4 py-2 shadow-sm">
       <Menu />
-      <ThemeSwitcher />
-      <LocaleSwitcher />
+      <div className="flex items-center gap-2">
+        <ThemeSwitcher />
+        <LocaleSwitcher />
+      </div>
     </div>
   );
 }
