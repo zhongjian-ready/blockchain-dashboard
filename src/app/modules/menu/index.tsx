@@ -39,6 +39,11 @@ export function Menu() {
                   <Link href="/i18n">i18n</Link>
                 </NavigationMenuLink>
               </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/wallet">wallet</Link>
+                </NavigationMenuLink>
+              </li>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

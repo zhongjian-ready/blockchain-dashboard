@@ -1,5 +1,6 @@
 'use client';
 
+import abis from '@/constants/abis';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useState } from 'react';
 import { parseEther } from 'viem';
@@ -11,19 +12,6 @@ import {
   useWriteContract,
 } from 'wagmi';
 
-// ERC20 ABI (简化版)
-const ERC20_ABI = [
-  {
-    type: 'function',
-    name: 'transfer',
-    inputs: [
-      { name: 'to', type: 'address' },
-      { name: 'value', type: 'uint256' },
-    ],
-    outputs: [{ type: 'bool' }],
-  },
-] as const;
-
 export default function Home() {
   // 1. 钱包连接状态
   const { address, isConnected } = useAccount();
@@ -33,7 +21,6 @@ export default function Home() {
   const { data: ethBalance } = useBalance({ address });
 
   // 3. 代币转账配置
-  const USDT_ADDRESS = '0xdAC17F958D2ee523a2206206994597C13D831ec7'; // Mainnet USDT
   const [toAddress, setToAddress] = useState('');
   const [amount, setAmount] = useState('');
 
@@ -52,8 +39,8 @@ export default function Home() {
   // 提交交易
   const handleTransfer = () => {
     writeContract({
-      address: USDT_ADDRESS,
-      abi: ERC20_ABI,
+      address: '0x55d398326f99059fF775485246999027B3197955', // BSC 上的 USDT 地址
+      abi: abis.usdt,
       functionName: 'transfer',
       args: [toAddress as `0x${string}`, parseEther(amount)],
     });
